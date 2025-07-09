@@ -1,0 +1,40 @@
+/* Reset CSS de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  padding: 40px;
+  color: #333;
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Colonne des images */
+.images {
+  flex: 1;
+  background-color: #f0f2f5;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cove
