@@ -7,44 +7,38 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0d0d0d;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }
 
 .hero {
-  background: linear-gradient(to top right, #ff6a00, #6f00ff);
-  padding: 80px 20px 120px;
-  text-align: left;
-  position: relative;
+  background: radial-gradient(circle at top left, #ff5100, #6f00ff);
+  padding: 60px 30px 100px;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text-left h1 {
+  font-size: 3.8rem;
   font-weight: bold;
   line-height: 1;
+  letter-spacing: -1px;
 }
 
-.hero h1 span {
-  display: block;
-  font-weight: 300;
-}
-
-.hero p {
+.text-left p {
   margin-top: 15px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
-  opacity: 0.9;
-}
-
-.social-icons {
-  position: absolute;
-  top: 30px;
-  right: 30px;
+  opacity: 0.85;
 }
 
 .social-icons a {
   color: white;
-  margin-left: 15px;
+  margin-left: 20px;
   font-size: 1.3rem;
   transition: color 0.3s ease;
 }
@@ -53,49 +47,63 @@ body {
   color: #ffcc00;
 }
 
-.clips-section {
-  padding: 60px 20px;
+.section-title {
+  margin-top: 80px;
   text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: relative;
 }
 
-.clips-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  color: #ffffff;
-  position: relative;
-  display: inline-block;
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #ff5100;
+  margin: 10px auto 0;
 }
 
 .clips {
   display: flex;
   justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 20px;
+  padding: 60px 30px;
+  background-color: #000;
 }
 
-.clip-card {
-  background-color: #1a1a1a;
-  padding: 15px;
-  border-radius: 8px;
-  width: 300px;
-  transition: transform 0.3s ease;
+.clip {
+  text-align: center;
+  max-width: 320px;
 }
 
-.clip-card:hover {
-  transform: scale(1.03);
-}
-
-.clip-card img {
-  width: 100%;
+.clip-frame {
+  background-color: #111;
+  border: 2px solid #ff5100;
+  padding: 8px;
   border-radius: 6px;
-  margin-bottom: 10px;
+  position: relative;
 }
 
-.clip-card p {
-  font-size: 1rem;
+.clip-frame::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #ff5100, #6f00ff);
+  margin-bottom: 8px;
+  border-radius: 3px 3px 0 0;
+}
+
+.clip img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.clip p {
+  margin-top: 10px;
+  font-size: 0.95rem;
   color: #ccc;
 }
-
 
