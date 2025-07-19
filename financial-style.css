@@ -1,78 +1,67 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #f5f0e6, #fff7e0, #e5d6b0);
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Financial Pages – ALPHA TRIUMPH</title>
+  <link rel="stylesheet" href="financial-style.css">
+</head>
+<body>
+  <div class="background-video">
+    <video id="bg-video" autoplay muted loop playsinline>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-gradient"></div>
+  </div>
 
-.container {
-  padding: 40px 60px;
-}
+  <div class="content">
+    <header>
+      <h1><em>Financial Overview – ALPHA TRIUMPH</em></h1>
+      <p class="subtitle">Business & Innovation Insights</p>
+    </header>
 
-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
+    <section class="section-block">
+      <h2>📊 Résumé Financier Prévisionnel</h2>
+      <p>
+        Données clés : compte de résultat, prévisions de revenus, charges, ROI estimé.
+      </p>
+    </section>
 
-h1 {
-  font-style: italic;
-  font-size: 2.5rem;
-  color: #b68d2c;
-  margin-bottom: 10px;
-}
+    <section class="section-block">
+      <h2>💼 Investissements Stratégiques</h2>
+      <p>
+        Développement produit, marketing, recherche médicale, partenariats industriels.
+      </p>
+    </section>
 
-.subtitle {
-  font-size: 1.1rem;
-  color: #888;
-}
+    <section class="section-block">
+      <h2>📅 Budget Prévisionnel à 3 Ans</h2>
+      <p>
+        Flux de trésorerie, besoins en financement, rentabilité estimée.
+      </p>
+    </section>
 
-.section-block {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-left: 5px solid #b68d2c;
-  padding: 20px 30px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
+    <footer>
+      <p class="back-link"><a href="index.html">← Retour à la page principale</a></p>
+    </footer>
+  </div>
 
-.section-block h2 {
-  margin-top: 0;
-  font-weight: bold;
-  color: #4b3c1a;
-}
+  <script>
+    // Liste des vidéos
+    const videos = [
+      "https://www.w3schools.com/howto/rain.mp4",
+      "https://www.w3schools.com/howto/forest.mp4",
+      "https://www.w3schools.com/howto/mountain.mp4"
+    ];
 
-.video-grid {
-  display: flex;
-  gap: 20px;
-  justify-content: space-around;
-  margin-top: 40px;
-}
+    let current = 0;
+    const videoElement = document.getElementById("bg-video");
 
-video {
-  width: 30%;
-  border-radius: 12px;
-  opacity: 0.85;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 12px rgba(0,0,0,0.2);
-}
-
-video:hover {
-  transform: scale(1.03);
-  opacity: 1;
-}
-
-footer {
-  text-align: center;
-  margin-top: 60px;
-}
-
-.back-link a {
-  text-decoration: none;
-  color: #b68d2c;
-  font-weight: bold;
-}
-
-.back-link a:hover {
-  text-decoration: underline;
-}
+    setInterval(() => {
+      current = (current + 1) % videos.length;
+      videoElement.src = videos[current];
+      videoElement.load();
+      videoElement.play();
+    }, 3350); // toutes les 3,35 secondes
+  </script>
+</body>
+</html>
