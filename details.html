@@ -1,62 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Financial Overview – ALPHA TRIUMPH</title>
-  <link rel="stylesheet" href="financial-style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Page - Alpha Triumph</title>
+  <link rel="stylesheet" href="financial-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Arrière-plan images rotatives -->
-  <div class="background-wrapper">
-    <div class="image-rotator">
-      <img src="images/bg1.jpg" alt="background 1">
-      <img src="images/bg2.jpg" alt="background 2">
-      <img src="images/bg3.jpg" alt="background 3">
+  <!-- Top Bar -->
+  <div class="header-topbar">
+    <div class="left-section">
+      <img src="images/logo.png" alt="Logo Alpha Triumph" class="logo" />
     </div>
-    <div class="gradient-overlay"></div>
+    <div class="right-section">
+      <span class="user-id">Utilisateur : <strong>alpha_admin</strong></span>
+      <button class="btn-login">Se connecter</button>
+      <div class="settings">
+        <i class="fas fa-cog"></i>
+        <div class="settings-dropdown">
+          <p>🌞 Luminosité : Auto</p>
+          <p>🧩 Mode : Avancé</p>
+          <p>🎛️ Interface : Complète</p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Contenu principal -->
+  <!-- Main Content -->
   <main class="content">
-    <header>
-      <h1><em>Financial Overview</em></h1>
-      <p class="subtitle">Alpha Triumph – Business & Innovation</p>
-    </header>
+    <h1 class="page-title">Alpha Triumph – Financial Overview</h1>
+    <p class="intro-text">
+      Explore our detailed projections, budget breakdown, and investment strategy.
+    </p>
 
-    <section class="card">
-      <h2>📊 Prévisions Financières</h2>
-      <p>Revenus projetés, coûts, ROI et performance budgétaire.</p>
-    </section>
-
-    <section class="card">
-      <h2>💼 Plan d’Investissement</h2>
-      <p>Stratégie d'allocation des ressources, innovation, R&D, communication.</p>
-    </section>
-
-    <section class="card">
-      <h2>📅 Projection 2025–2028</h2>
-      <p>Objectifs à moyen terme, seuil de rentabilité, financement.</p>
-    </section>
-
-    <footer>
-      <a href="index.html" class="back-link">← Retour à la page d'accueil</a>
-    </footer>
+    <!-- Placeholder section where rotating background images would appear -->
+    <div class="background-layer"></div>
   </main>
-
-  <script>
-    // Script rotation des images d'arrière-plan
-    const images = document.querySelectorAll('.image-rotator img');
-    let current = 0;
-
-    setInterval(() => {
-      images.forEach((img, i) => {
-        img.style.opacity = (i === current) ? '1' : '0';
-      });
-      current = (current + 1) % images.length;
-    }, 4000); // Change toutes les 4 secondes
-  </script>
 
 </body>
 </html>
+
+  
+     
