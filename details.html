@@ -2,52 +2,61 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Financial Pages – ALPHA TRIUMPH</title>
+  <title>Financial Overview – ALPHA TRIUMPH</title>
   <link rel="stylesheet" href="financial-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+
+  <!-- Arrière-plan images rotatives -->
+  <div class="background-wrapper">
+    <div class="image-rotator">
+      <img src="images/bg1.jpg" alt="background 1">
+      <img src="images/bg2.jpg" alt="background 2">
+      <img src="images/bg3.jpg" alt="background 3">
+    </div>
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <!-- Contenu principal -->
+  <main class="content">
     <header>
-      <h1><em>Financial Overview – ALPHA TRIUMPH</em></h1>
-      <p class="subtitle">Business & Innovation Insights</p>
+      <h1><em>Financial Overview</em></h1>
+      <p class="subtitle">Alpha Triumph – Business & Innovation</p>
     </header>
 
-    <section class="section-block">
-      <h2>📊 Résumé Financier Prévisionnel</h2>
-      <p>
-        Cette section contient les données clés : compte de résultat, prévisions de revenus, charges opérationnelles, marge nette, ROI attendu.
-      </p>
+    <section class="card">
+      <h2>📊 Prévisions Financières</h2>
+      <p>Revenus projetés, coûts, ROI et performance budgétaire.</p>
     </section>
 
-    <section class="section-block">
-      <h2>💼 Investissements Stratégiques</h2>
-      <p>
-        Détail des coûts liés au développement du produit, au marketing, à la recherche médicale, ainsi qu'aux partenaires industriels.
-      </p>
+    <section class="card">
+      <h2>💼 Plan d’Investissement</h2>
+      <p>Stratégie d'allocation des ressources, innovation, R&D, communication.</p>
     </section>
 
-    <section class="section-block">
-      <h2>📅 Budget Prévisionnel à 3 Ans</h2>
-      <p>
-        Estimation des flux de trésorerie, besoins en financement, rentabilité projetée et échéances critiques.
-      </p>
+    <section class="card">
+      <h2>📅 Projection 2025–2028</h2>
+      <p>Objectifs à moyen terme, seuil de rentabilité, financement.</p>
     </section>
-
-    <div class="video-grid">
-      <video autoplay muted loop playsinline>
-        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-      </video>
-      <video autoplay muted loop playsinline>
-        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-      </video>
-      <video autoplay muted loop playsinline>
-        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-      </video>
-    </div>
 
     <footer>
-      <p class="back-link"><a href="index.html">← Retour à la page principale</a></p>
+      <a href="index.html" class="back-link">← Retour à la page d'accueil</a>
     </footer>
-  </div>
+  </main>
+
+  <script>
+    // Script rotation des images d'arrière-plan
+    const images = document.querySelectorAll('.image-rotator img');
+    let current = 0;
+
+    setInterval(() => {
+      images.forEach((img, i) => {
+        img.style.opacity = (i === current) ? '1' : '0';
+      });
+      current = (current + 1) % images.length;
+    }, 4000); // Change toutes les 4 secondes
+  </script>
+
 </body>
 </html>
