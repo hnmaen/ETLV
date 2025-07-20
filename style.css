@@ -1,153 +1,137 @@
 /* Reset CSS de base */
 /* Barre du haut avec logo, identifiants et paramètres */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Fond et police globale */
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #000;
-  color: #fff;
+  background: linear-gradient(to bottom, #f5f2eb, #ffffff);
+  color: #222;
 }
 
-/* ==== En-tête / HERO ==== */
-.hero {
-  background: radial-gradient(circle at top left, #ff5100, #6f00ff);
-  padding: 60px 30px 100px;
-}
-
-/* Conteneur principal de l'en-tête */
-.header-container {
+/* Top bar */
+.header-topbar {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  background: linear-gradient(to right, #f8f4ea, #fffaf3);
+  padding: 12px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* === TITRE STYLÉ ALPHA TRIUMPH === */
-.text-left h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4.2rem;
-  font-style: italic;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 1;
-  animation: fadeInDown 1s ease-out both;
+.logo {
+  height: 45px;
 }
 
-/* Slogan sous le titre */
-.text-left p {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  opacity: 0.85;
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-/* Réseaux sociaux */
-.social-icons a {
-  color: white;
-  margin-left: 20px;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
+.user-id {
+  font-size: 0.9rem;
 }
 
-.social-icons a:hover {
-  color: #ffcc00;
+.btn-login {
+  background: #e0d3b8;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* === Titre section clips === */
-.section-title {
-  margin-top: 80px;
-  text-align: center;
-  font-size: 1.3rem;
-  text-transform: uppercase;
+.btn-login:hover {
+  background: #d3c1a5;
+}
+
+.settings {
   position: relative;
+  cursor: pointer;
 }
 
-.section-title::after {
-  content: '';
+.settings-dropdown {
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 12px 18px;
+  width: 200px;
+}
+
+.settings:hover .settings-dropdown {
   display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #ff5100;
-  margin: 10px auto 0;
 }
 
-/* ==== Clips ==== */
+/* Hero Section */
+.hero {
+  padding: 60px 30px;
+  background-color: #f6f0e8;
+  text-align: center;
+}
+
+.hero h1 {
+  font-style: italic;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Clips Section */
 .clips {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 60px 30px;
-  background-color: #000;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #f5f2eb, #ffffff);
 }
 
-/* Bloc clip */
 .clip {
   text-align: center;
-  max-width: 320px;
-  animation: fadeInUp 0.8s ease-out both;
+  margin: 20px;
+  transition: transform 0.3s ease;
 }
 
-/* Cadre d’image avec effet hover */
 .clip-frame {
-  background-color: #111;
-  border: 2px solid #ff5100;
-  padding: 8px;
-  border-radius: 6px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.clip-frame::before {
-  content: "";
-  display: block;
-  height: 5px;
+.clip-frame img {
   width: 100%;
-  background: linear-gradient(to right, #ff5100, #6f00ff);
-  margin-bottom: 8px;
-  border-radius: 3px 3px 0 0;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-.clip-frame:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px rgba(255, 81, 0, 0.3);
+.clip:hover .clip-frame img {
+  transform: scale(1.05);
 }
 
-/* Images */
-.clip img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-/* Légendes des clips */
 .clip p {
   margin-top: 10px;
   font-size: 0.95rem;
-  color: #ccc;
 }
 
-/* ==== Animations ==== */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.clip-link {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.clip-link:hover {
+  color: #b99858;
 }
