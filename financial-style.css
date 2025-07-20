@@ -1,67 +1,109 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Financial Pages – ALPHA TRIUMPH</title>
-  <link rel="stylesheet" href="financial-style.css">
-</head>
-<body>
-  <div class="background-video">
-    <video id="bg-video" autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-    </video>
-    <div class="overlay-gradient"></div>
-  </div>
+/* Typographie */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  height: 100%;
+  overflow-x: hidden;
+}
 
-  <div class="content">
-    <header>
-      <h1><em>Financial Overview – ALPHA TRIUMPH</em></h1>
-      <p class="subtitle">Business & Innovation Insights</p>
-    </header>
+/* Arrière-plan rotatif avec dégradé */
+.background-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
 
-    <section class="section-block">
-      <h2>📊 Résumé Financier Prévisionnel</h2>
-      <p>
-        Données clés : compte de résultat, prévisions de revenus, charges, ROI estimé.
-      </p>
-    </section>
+/* Conteneur rotatif d'images */
+.image-rotator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
-    <section class="section-block">
-      <h2>💼 Investissements Stratégiques</h2>
-      <p>
-        Développement produit, marketing, recherche médicale, partenariats industriels.
-      </p>
-    </section>
+.image-rotator img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  filter: brightness(0.7) blur(3px);
+}
 
-    <section class="section-block">
-      <h2>📅 Budget Prévisionnel à 3 Ans</h2>
-      <p>
-        Flux de trésorerie, besoins en financement, rentabilité estimée.
-      </p>
-    </section>
+/* Superposition dégradée */
+.gradient-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #fdfbf6, #f5ebdc, #fffbe6, #1a1a1a 5%);
+  opacity: 0.75;
+  z-index: -1;
+}
 
-    <footer>
-      <p class="back-link"><a href="index.html">← Retour à la page principale</a></p>
-    </footer>
-  </div>
+/* Contenu principal */
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 30px;
+  position: relative;
+  z-index: 1;
+}
 
-  <script>
-    // Liste des vidéos
-    const videos = [
-      "https://www.w3schools.com/howto/rain.mp4",
-      "https://www.w3schools.com/howto/forest.mp4",
-      "https://www.w3schools.com/howto/mountain.mp4"
-    ];
+/* Titres */
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-    let current = 0;
-    const videoElement = document.getElementById("bg-video");
+h1 {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #bfa56d;
+}
 
-    setInterval(() => {
-      current = (current + 1) % videos.length;
-      videoElement.src = videos[current];
-      videoElement.load();
-      videoElement.play();
-    }, 3350); // toutes les 3,35 secondes
-  </script>
-</body>
-</html>
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Cartes */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #5a4421;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #bfa56d;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
