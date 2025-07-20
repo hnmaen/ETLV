@@ -1,137 +1,153 @@
-/* Reset CSS de base */
-/* Barre du haut avec logo, identifiants et paramètres */
-/* Fond et police globale */
+/* style.css */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #f5f2eb, #ffffff);
-  color: #222;
+  background-color: #121212;
+  color: white;
 }
 
-/* Top bar */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Barre du haut */
 .header-topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #f8f4ea, #fffaf3);
-  padding: 12px 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
-  height: 45px;
+  width: 50px;
+  height: auto;
 }
 
 .right-section {
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.user-id {
-  font-size: 0.9rem;
+  gap: 15px;
 }
 
 .btn-login {
-  background: #e0d3b8;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .btn-login:hover {
-  background: #d3c1a5;
+  background-color: white;
+  color: #1e1e1e;
 }
 
 .settings {
   position: relative;
+}
+
+.settings i {
   cursor: pointer;
+  font-size: 1.2em;
 }
 
 .settings-dropdown {
   display: none;
   position: absolute;
-  top: 28px;
+  top: 25px;
   right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 12px 18px;
-  width: 200px;
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 20;
+  color: #ccc;
 }
 
 .settings:hover .settings-dropdown {
   display: block;
 }
 
-/* Hero Section */
+/* Bandeau principal */
 .hero {
-  padding: 60px 30px;
-  background-color: #f6f0e8;
+  background-color: #1e1e1e;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.hero h1 {
-  font-style: italic;
-  font-size: 3rem;
-  margin-bottom: 10px;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  color: #555;
+.text-left {
+  max-width: 60%;
+  text-align: left;
+}
+
+.text-left h1 {
+  font-size: 48px;
+  font-style: italic;
+  margin: 0;
+  color: #fff;
+}
+
+.text-left p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 20px;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
 }
 
 .section-title {
-  margin-top: 20px;
-  font-size: 2rem;
-  font-weight: 600;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #bbb;
 }
 
-/* Clips Section */
+/* Zone clips */
 .clips {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
   padding: 40px 20px;
-  background: linear-gradient(to bottom, #f5f2eb, #ffffff);
+  background-color: #121212;
 }
 
 .clip {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 320px;
   text-align: center;
-  margin: 20px;
-  transition: transform 0.3s ease;
 }
 
-.clip-frame {
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.clip:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #ffffff22;
 }
 
 .clip-frame img {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
-}
-
-.clip:hover .clip-frame img {
-  transform: scale(1.05);
-}
-
-.clip p {
-  margin-top: 10px;
-  font-size: 0.95rem;
-}
-
-.clip-link {
-  text-decoration: none;
-  color: #222;
-  font-weight: bold;
-}
-
-.clip-link:hover {
-  color: #b99858;
+  border-radius: 8px;
 }
