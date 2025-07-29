@@ -1,116 +1,20 @@
-/* Typographie */
-/* Base */
-/* Global Reset and Base */
+/* -------------------------
+   BASE STYLING
+-------------------------- */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff; /* fond blanc uniforme */
-  color: #222;
-}
-
-/* Header styling */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #e0e0e0;
-  background-color: #ffffff;
-}
-
-/* Logo */
-.logo {
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: bold;
-  color: #000;
-}
-
-/* Navbar + Paramètres + Connexion */
-.navbar {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #000;
-}
-
-.settings-icon {
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-left: 1rem;
-}
-
-/* Section Title */
-.section-title {
-  text-align: center;
-  margin: 2rem 0 1rem;
-  font-size: 2rem;
-  font-style: italic;
-  color: #111;
-}
-
-/* Financial Table Styling */
-.financial-table {
-  width: 90%;
-  margin: 2rem auto;
-  border-collapse: collapse;
-  background: #ffffff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.financial-table thead {
-  background-color: #f5f5f5;
-}
-
-.financial-table th,
-.financial-table td {
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.financial-table tr:hover {
-  background-color: rgba(0, 0, 0, 0.03);
-  transition: background-color 0.3s ease;
-}
-
-.financial-table th {
-  font-style: italic;
-  color: #222;
-}
-
-/* Footer (if needed) */
-.footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 3rem;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom right, #f5f0e6, #ffffff);
   color: #222;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
-/* Top Bar */
+/* -------------------------
+   HEADER / TOP BAR
+-------------------------- */
 .header-topbar {
   display: flex;
   justify-content: space-between;
@@ -118,7 +22,6 @@ body {
   background: linear-gradient(to right, #f8f4ea, #fffaf3);
   padding: 12px 30px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
   z-index: 10;
 }
 
@@ -127,16 +30,10 @@ body {
   width: auto;
 }
 
-/* Right section */
 .right-section {
   display: flex;
   align-items: center;
   gap: 20px;
-}
-
-.user-id {
-  font-size: 0.9rem;
-  color: #333;
 }
 
 .btn-login {
@@ -153,12 +50,11 @@ body {
   background: #d3c1a5;
 }
 
-/* Settings */
 .settings {
   position: relative;
-  cursor: pointer;
   font-size: 1.2rem;
   color: #555;
+  cursor: pointer;
 }
 
 .settings-dropdown {
@@ -178,7 +74,9 @@ body {
   display: block;
 }
 
-/* Main content */
+/* -------------------------
+   MAIN CONTENT
+-------------------------- */
 .content {
   padding: 60px 40px;
   text-align: center;
@@ -201,7 +99,9 @@ body {
   color: #555;
 }
 
-/* Background aesthetic */
+/* -------------------------
+   BACKGROUND IMAGE
+-------------------------- */
 .background-layer {
   position: fixed;
   top: 0;
@@ -222,66 +122,51 @@ body {
   100% {
     transform: scale(1.03) rotate(0.5deg);
     opacity: 0.07;
-.financial-table {
-  width: 90%;
-  margin: 2rem auto;
-  border-collapse: collapse;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.financial-table thead {
-  background-color: #f5f5f5;
-}
-
-.financial-table th,
-.financial-table td {
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.financial-table tr:hover {
-  background-color: rgba(255, 222, 173, 0.2);
-  transition: background-color 0.3s ease;
-}
-
-.financial-table th {
-  font-style: italic;
-  color: #222;
-.financial-table {
-  width: 90%;
-  margin: 2rem auto;
-  border-collapse: collapse;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.financial-table thead {
-  background-color: #f5f5f5;
-}
-
-.financial-table th,
-.financial-table td {
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.financial-table tr:hover {
-  background-color: rgba(255, 222, 173, 0.2);
-  transition: background-color 0.3s ease;
-}
-
-.financial-table th {
-  font-style: italic;
-  color: #222;
-}
   }
+}
+
+/* -------------------------
+   FINANCIAL TABLE
+-------------------------- */
+.financial-table {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.financial-table thead {
+  background-color: #f5f5f5;
+}
+
+.financial-table th,
+.financial-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.financial-table tr:hover {
+  background-color: rgba(255, 222, 173, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.financial-table th {
+  font-style: italic;
+  color: #222;
+}
+
+/* -------------------------
+   SECTION TITLES
+-------------------------- */
+.section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  font-style: italic;
+  color: #111;
 }
