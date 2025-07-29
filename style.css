@@ -1,7 +1,9 @@
 /* Police générale */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom right, #f5f5f5, #ffffff);
   color: #333;
 }
@@ -15,7 +17,6 @@ body {
   color: white;
   padding: 10px 20px;
   height: 60px;
-  position: relative;
 }
 
 .header-topbar .left-section {
@@ -27,6 +28,13 @@ body {
   height: 40px;
 }
 
+/* Zone droite regroupée */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 /* Bouton Se connecter */
 .btn-login {
   background-color: #f0c040;
@@ -34,7 +42,6 @@ body {
   border: none;
   padding: 6px 12px;
   border-radius: 4px;
-  margin-left: 12px;
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.3s ease;
@@ -47,7 +54,6 @@ body {
 /* Paramètres */
 .settings {
   position: relative;
-  margin-left: 20px;
   cursor: pointer;
 }
 
@@ -73,11 +79,10 @@ body {
   display: block;
 }
 
-/* Réseaux sociaux en haut */
+/* Réseaux sociaux */
 .social-icons-topbar {
   display: flex;
   gap: 12px;
-  margin-left: 20px;
   align-items: center;
 }
 
@@ -172,5 +177,3 @@ body {
   color: #f0c040;
   font-weight: 600;
 }
-
-
