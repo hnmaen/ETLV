@@ -1,179 +1,98 @@
-/* Police générale */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* style.css (synchronisé) */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #f5f5f5, #ffffff);
-  color: #333;
+  background: linear-gradient(to bottom right, #f8f4ea, #ffffff);
+  color: #222;
 }
 
-/* Barre supérieure */
 .header-topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
-  color: white;
-  padding: 10px 20px;
-  height: 60px;
-}
-
-.header-topbar .left-section {
-  display: flex;
-  align-items: center;
+  background: linear-gradient(to right, #f8f4ea, #fffaf3);
+  padding: 12px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  height: 40px;
+  height: 45px;
+  width: auto;
 }
 
-/* Zone droite regroupée */
 .right-section {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
-/* Bouton Se connecter */
+.user-id {
+  font-size: 0.9rem;
+  color: #333;
+}
+
 .btn-login {
-  background-color: #f0c040;
-  color: black;
+  background: #e0d3b8;
   border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 6px 14px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .btn-login:hover {
-  background-color: #ffda7a;
+  background: #d3c1a5;
 }
 
-/* Paramètres */
 .settings {
   position: relative;
-  cursor: pointer;
-}
-
-.settings i {
-  font-size: 20px;
+  font-size: 1.2rem;
+  color: #555;
 }
 
 .settings-dropdown {
   display: none;
   position: absolute;
+  top: 28px;
   right: 0;
-  top: 30px;
-  background-color: #222;
-  color: white;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 14px;
-  min-width: 160px;
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 12px 18px;
+  font-size: 0.9rem;
 }
 
 .settings:hover .settings-dropdown {
   display: block;
 }
 
-/* Réseaux sociaux */
-.social-icons-topbar {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
 .social-icons-topbar a {
-  color: white;
-  font-size: 18px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #555;
+  margin-left: 12px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 .social-icons-topbar a:hover {
-  transform: scale(1.2);
-  color: #f0c040;
+  color: #000;
 }
 
-/* Bandeau principal */
-.hero {
-  background: linear-gradient(45deg, #000000, #222222);
-  color: white;
-  padding: 80px 40px 60px 40px;
-  text-align: left;
-}
-
-.header-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.text-left h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 48px;
-  margin: 0;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
   font-style: italic;
-  color: white;
+  margin-bottom: 10px;
 }
 
-.text-left p {
-  font-size: 16px;
-  margin-top: 10px;
-  font-weight: 300;
-  color: #ccc;
-}
-
-/* Section clips/images */
-.clips {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 40px 20px;
-  background-color: #fff;
-}
-
-.clip {
-  width: 320px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.clip:hover {
-  transform: scale(1.05);
-}
-
-.clip-frame {
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
-
-.clip-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.clip-frame:hover img {
-  transform: scale(1.1);
-}
-
-.clip p {
-  margin-top: 12px;
-  font-size: 15px;
-  color: #333;
-}
-
-/* Titre de section */
 .section-title {
-  font-size: 24px;
   text-align: center;
   margin-top: 20px;
-  color: #f0c040;
-  font-weight: 600;
+  font-size: 2rem;
+  font-style: italic;
+  color: #3b3b3b;
 }
