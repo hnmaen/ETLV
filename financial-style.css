@@ -1,5 +1,105 @@
 /* Typographie */
 /* Base */
+/* Global Reset and Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff; /* fond blanc uniforme */
+  color: #222;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Navbar + Paramètres + Connexion */
+.navbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+.settings-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  font-style: italic;
+  color: #111;
+}
+
+/* Financial Table Styling */
+.financial-table {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.financial-table thead {
+  background-color: #f5f5f5;
+}
+
+.financial-table th,
+.financial-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.financial-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  transition: background-color 0.3s ease;
+}
+
+.financial-table th {
+  font-style: italic;
+  color: #222;
+}
+
+/* Footer (if needed) */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 3rem;
+}
 body {
   margin: 0;
   padding: 0;
