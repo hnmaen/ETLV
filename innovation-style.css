@@ -1,0 +1,61 @@
+/* ----- Section financement ----- */
+.funding-section {
+  padding: 60px 20px;
+  background-color: #121212;
+  text-align: center;
+  color: #ddd;
+}
+
+.funding-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ----- Section partenaires et certifications ----- */
+.partners-section {
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.partner-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.partner-card {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 0 10px #00000033;
+  transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px #ffffff22;
+}
+
+.partner-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.partner-card h4 {
+  color: #f0f0f0;
+  font-style: italic;
+  margin: 10px 0 8px;
+}
+
+.partner-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
