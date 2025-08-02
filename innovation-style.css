@@ -18,15 +18,11 @@ a {
   align-items: center;
   background-color: #1a1a1a;
   padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
   border-bottom: 1px solid #2a2a2a;
 }
 
 .logo {
   height: 45px;
-  width: auto;
 }
 
 .right-section {
@@ -40,14 +36,13 @@ a {
   border: 1px solid #f0f0f0;
   color: white;
   padding: 6px 12px;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn-login:hover {
   background-color: white;
-  color: #1a1a1a;
+  color: #121212;
 }
 
 .settings {
@@ -60,52 +55,30 @@ a {
   top: 30px;
   right: 0;
   background-color: #2a2a2a;
-  color: #eee;
   padding: 10px;
   border-radius: 5px;
-  width: 180px;
+  font-size: 0.9rem;
 }
 
 .settings:hover .settings-dropdown {
   display: block;
 }
 
-.social-icons-topbar {
-  display: flex;
-  gap: 12px;
-  margin-left: 20px;
-  align-items: center;
-}
-
 .social-icons-topbar a {
   color: white;
   font-size: 18px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons-topbar a:hover {
-  transform: scale(1.2);
-  color: gold;
 }
 
 .hero {
   background-color: #1a1a1a;
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
-}
-
-.header-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .text-left h1 {
   font-size: 48px;
   margin: 0;
   font-style: italic;
-  color: white;
 }
 
 .text-left p {
@@ -114,68 +87,67 @@ a {
 }
 
 .section-title {
-  font-size: 24px;
-  color: #bbb;
-  margin-top: 20px;
+  font-size: 22px;
+  color: #aaa;
+  margin-top: 10px;
 }
 
-.product-info,
-.certification,
-.partners,
-.funding {
-  padding: 40px 20px;
+.section-block {
+  padding: 50px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-.product-info ul {
+.section-block h2 {
+  font-style: italic;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.section-block p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.features-list {
   list-style: none;
   padding-left: 0;
 }
 
-.product-info li {
+.features-list li {
   margin: 10px 0;
-  padding-left: 15px;
+  font-size: 16px;
+  padding-left: 1.2em;
   position: relative;
 }
 
-.product-info li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-}
-
-.cert-logos {
+.certifications {
   display: flex;
   gap: 20px;
-  justify-content: center;
   margin-top: 20px;
+  justify-content: center;
 }
 
-.cert-logos img {
+.certifications img {
   width: 100px;
   height: auto;
-  border-radius: 6px;
   background: white;
+  border-radius: 5px;
 }
 
 .collaborators {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
 }
 
-.partner {
+.collab-card {
   background-color: #1f1f1f;
   padding: 12px 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
+  color: #eee;
 }
-
-.funding button {
-  margin-top: 20px;
-  font-size: 1rem;
-}
-
