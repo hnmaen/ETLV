@@ -8,42 +8,50 @@ body {
   color: #f0f0f0;
 }
 
+/* ----- Topbar ----- */
 .header-topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1a1a1a;
-  padding: 10px 20px;
+  padding: 12px 30px;
   border-bottom: 1px solid #2a2a2a;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
-  width: 50px;
-  height: auto;
+  height: 45px;
+  width: auto;
 }
 
 .right-section {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .btn-login {
   background: transparent;
   border: 1px solid #f0f0f0;
   color: white;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 500;
 }
 
+.btn-login:hover {
+  background-color: white;
+  color: #1a1a1a;
+}
+
+/* ----- Paramètres ----- */
 .settings {
   position: relative;
-}
-
-.settings i {
-  font-size: 1.2em;
-  cursor: pointer;
+  font-size: 1.2rem;
+  color: #ccc;
 }
 
 .settings-dropdown {
@@ -52,7 +60,6 @@ body {
   top: 30px;
   right: 0;
   background-color: #2a2a2a;
-  color: #eee;
   padding: 10px;
   border-radius: 5px;
 }
@@ -61,47 +68,65 @@ body {
   display: block;
 }
 
+/* ----- Contenu Principal ----- */
 .content {
-  padding: 40px 30px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .page-title {
   font-size: 2.5rem;
   font-style: italic;
-  margin-bottom: 20px;
+  font-weight: 600;
   color: white;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .intro-text {
   font-size: 1.1rem;
   max-width: 700px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 40px;
   color: #ccc;
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-style: italic;
-  color: #aaa;
-  margin: 40px 0 10px;
+  margin: 40px 0 20px;
+  color: #ddd;
 }
 
+/* ----- Tableaux ----- */
 .financial-table {
-  width: 100%;
-  margin: 20px 0;
+  width: 90%;
+  margin: 20px auto;
   border-collapse: collapse;
-  background: #1f1f1f;
-  color: white;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px #ffffff15;
+}
+
+.financial-table thead {
+  background-color: #2a2a2a;
 }
 
 .financial-table th,
 .financial-table td {
-  padding: 12px;
-  border: 1px solid #333;
+  padding: 1rem;
   text-align: center;
+  border-bottom: 1px solid #333;
 }
 
 .financial-table th {
-  background-color: #2a2a2a;
   font-style: italic;
+  color: #f0f0f0;
+}
+
+.financial-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
