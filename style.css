@@ -1,59 +1,98 @@
-/* Page description */
-.description {
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
+/* Style global */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  color: #333;
 }
 
-.description-container {
+/* Header */
+.header-topbar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1000px;
+  justify-content: space-between;
   align-items: center;
-}
-
-.desc-image {
-  flex: 1 1 300px;
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.desc-text {
-  flex: 1 1 400px;
-}
-
-.desc-text h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #1b263b;
-}
-
-.desc-text p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.btn-back {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #1b263b;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
   color: white;
-  border-radius: 8px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-menu a {
+  margin: 0 12px;
+  color: white;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ffd60a;
+}
+
+/* Bouton connexion */
+.btn-login {
+  background: #ffd60a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-.btn-back:hover {
-  background: #415a77;
+.btn-login:hover {
+  background: #ffc300;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('images/bg.jpg') no-repeat center center/cover;
+  color: white;
+}
+
+.section-title {
+  margin-top: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Clips */
+.clips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 40px;
+}
+
+.clip {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.clip:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.clip-frame img {
+  border-radius: 8px;
+  max-width: 100%;
 }
 
 /* Footer */
 .footer {
+  background: #222;
+  color: #aaa;
   text-align: center;
   padding: 20px;
-  background: #0d1b2a;
-  color: #fff;
   margin-top: 40px;
 }
