@@ -2,73 +2,86 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>SGTA PROJECT OFFICIAL - Accueil</title>
+  <title>SGTA PROJECT OFFICIAL</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="default-theme">
 
-  <!-- HEADER -->
-  <header class="topbar">
-    <div class="logo-section">
+  <!-- Bandeau supérieur -->
+  <header class="header-topbar">
+    <div class="left-section">
       <img src="images/logo.png" alt="Logo Alpha Triumph" class="logo">
-      <h1 class="site-title">Alpha Triumph</h1>
     </div>
-    <nav class="menu">
+    <nav class="nav-menu">
       <a href="index.html">Accueil</a>
       <a href="innovation.html">Innovation</a>
       <a href="description.html">Description</a>
       <a href="details.html">Détails</a>
     </nav>
-    <div class="actions">
+    <div class="right-section">
       <button class="btn-login">Se connecter</button>
-      <div class="social-icons">
+      <div class="settings">
+        <i class="fas fa-cog"></i>
+        <div class="settings-dropdown">
+          <p>Luminosité : Auto</p>
+          <p>Mode : Avancé</p>
+          <p>Interface : Complète</p>
+        </div>
+      </div>
+      <div class="social-icons-topbar">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="https://x.com/pageoffsgta?s=21"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/pageofficielle.sgta"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/pageofficielle.sgta?igsh=YTVnd3BranNvOGF0&utm_source=qr"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- Section héro -->
   <section class="hero">
-    <h1>Bienvenue chez <span>Alpha Triumph</span></h1>
-    <p>Enterprise Innovation of Medicale</p>
+    <div class="header-container">
+      <div class="text-left">
+        <h1><em>ALPHA<br>TRIUMPH</em></h1>
+        <p>ENTERPRISE INNOVATION OF MEDICALE</p>
+      </div>
+    </div>
+    <h2 class="section-title">ALPHA TRIUMPH</h2>
   </section>
 
-  <!-- PROJETS -->
+  <!-- Zone des clips/images -->
   <main class="clips">
-    <h2 class="section-title">Nos Projets</h2>
-    <div class="cards">
+    <div class="clip">
+      <a href="details.html">
+        <div class="clip-frame">
+          <img src="https://via.placeholder.com/320x180?text=Prototype+3D" alt="Prototype">
+        </div>
+        <p>Visualy financial data</p>
+      </a>
+    </div>
 
-      <div class="card">
-        <a href="details.html">
-          <img src="images/prototype.png" alt="Prototype">
-          <h3>Visualy financial data</h3>
+    <div class="clip">
+      <a href="innovation.html">
+        <div class="clip-frame">
+          <img src="https://via.placeholder.com/320x180?text=Innovation" alt="Innovation">
+        </div>
+        <p>Product intelligente and revolutionary</p>
+      </a>
+    </div>
+
+    <div class="clip">
+      <div class="clip-frame">
+        <a href="https://www.google.com">
+          <img src="images/lunettes.png" alt="Lunettes intelligentes" width="200">
         </a>
       </div>
-
-      <div class="card">
-        <a href="innovation.html">
-          <img src="images/innovation.png" alt="Innovation">
-          <h3>Product intelligent and revolutionary</h3>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="description.html">
-          <img src="images/health.png" alt="Health">
-          <h3>Truth product and health with financial</h3>
-        </a>
-      </div>
-
+      <p>Truth product and health with financial</p>
     </div>
   </main>
 
-  <!-- FOOTER -->
+  <!-- Pied de page -->
   <footer class="footer">
-    <p>&copy; 2025 Alpha Triumph - Tous droits réservés</p>
+    <p>&copy; 2025 Alpha Triumph - Tous droits réservés.</p>
   </footer>
 
 </body>
