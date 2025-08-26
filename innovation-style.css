@@ -1,21 +1,24 @@
-/* Style global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #f8f4ea, #ffffff);
-  color: #222;
-  overflow-x: hidden;
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
-/* Bandeau supérieur */
+/* ----- Topbar ----- */
 .header-topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #f8f4ea, #fffaf3);
+  background-color: #1a1a1a;
   padding: 12px 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #2a2a2a;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -30,170 +33,100 @@ body {
 }
 
 .btn-login {
-  background: #e0d3b8;
-  border: none;
+  background: transparent;
+  border: 1px solid #f0f0f0;
+  color: white;
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
-  transition: background 0.3s ease;
 }
 
 .btn-login:hover {
-  background: #d3c1a5;
+  background-color: white;
+  color: #1a1a1a;
 }
 
-/* Icônes réseaux sociaux */
-.social-icons-topbar a {
-  margin-left: 12px;
-  color: #444;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons-topbar a:hover {
-  color: #c2a97a;
-}
-
-/* Paramètres */
+/* ----- Paramètres ----- */
 .settings {
   position: relative;
   font-size: 1.2rem;
-  color: #555;
+  color: #ccc;
 }
 
 .settings-dropdown {
   display: none;
   position: absolute;
-  top: 28px;
+  top: 30px;
   right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 12px 18px;
-  font-size: 0.9rem;
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .settings:hover .settings-dropdown {
   display: block;
 }
 
-/* En-tête principal */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: #fff;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-style: italic;
-  font-weight: 600;
-  margin: 0;
-  color: #3b3b3b;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-/* Contenu innovation */
-.innovation-content {
+/* ----- Contenu Principal ----- */
+.content {
   padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.innovation-content section {
-  margin-bottom: 50px;
-}
-
-.innovation-content h2 {
-  font-size: 1.8rem;
-  font-style: italic;
-  margin-bottom: 15px;
-  color: #3b3b3b;
-}
-
-.innovation-content p, 
-.innovation-content ul {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-.innovation-content ul {
-  list-style: square inside;
-}
-
-/* Grille des prix */
-.pricing-grid {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.price-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  width: 280px;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.price-card img {
-  border-radius: 10px;
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.price-card h3 {
-  margin: 10px 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.price-card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.price-card .price {
-  display: block;
-  margin-top: 10px;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #c2a97a;
-}
-
-/* Slogan */
-.slogan h2 {
-  text-align: center;
-  font-size: 2rem;
+.page-title {
+  font-size: 2.5rem;
   font-style: italic;
-  color: #222;
-}
-
-/* Crowdfunding */
-.crowdfunding {
-  text-align: center;
-}
-
-.btn-participate {
-  background: #c2a97a;
+  font-weight: 600;
   color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 15px;
-  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-.btn-participate:hover {
-  background: #b09068;
+.intro-text {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #ccc;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 40px 0 20px;
+  color: #ddd;
+}
+
+/* ----- Tableaux ----- */
+.financial-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px #ffffff15;
+}
+
+.financial-table thead {
+  background-color: #2a2a2a;
+}
+
+.financial-table th,
+.financial-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.financial-table th {
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+.financial-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
